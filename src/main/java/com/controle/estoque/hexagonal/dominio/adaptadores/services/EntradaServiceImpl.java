@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @AllArgsConstructor
 public class EntradaServiceImpl implements ProdutoServicePort {
@@ -24,11 +25,11 @@ public class EntradaServiceImpl implements ProdutoServicePort {
     @Override
     public List<ProdutoDTO> buscarProdutos() {
         var produtos = this.produtoRepository.buscarTodos();
-        return produtos.stream().map(Produto::toProdutoDTO).toList();
+        return produtos.stream().map(Produto::toProdutoDTO).collect(Collectors.toList());
     }
 
     @Override
-    public void atualizarEstoque(String id, Double qtdEstoque) throws NotFoundException {
+    public void atualizarEstoque(String id, Integer qtdEstoque) throws NotFoundException {
         var produto = Optional
                 .ofNullable(this.produtoRepository.buscarPeloId(id)
                         .orElseThrow(() -> new NotFoundException("Produto não encontrado")));

@@ -16,8 +16,8 @@ public class DataConfiguration {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql://192.168.1.100:3306/controleestoque?useTimezone=true&serverTimezone=America/Sao_Paulo");
-		dataSource.setUsername("");// TODO: 05/09/2022 Seu Usuário do Banco
-		dataSource.setPassword("");// TODO: 05/09/2022 Sua Senha
+		dataSource.setUsername("su");// TODO: 05/09/2022 Seu Usuário do Banco
+		dataSource.setPassword("system.1231");// TODO: 05/09/2022 Sua Senha
 		return dataSource;
 	}
 	

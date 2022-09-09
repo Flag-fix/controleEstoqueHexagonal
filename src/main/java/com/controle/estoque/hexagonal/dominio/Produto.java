@@ -15,7 +15,7 @@ public class Produto {
     private UUID id;
     private String nome;
     private Double valorProduto;
-    private Double quantidade;
+    private Integer quantidade;
 
     public Produto() {
     }
@@ -26,7 +26,7 @@ public class Produto {
         this.quantidade = produtoDTO.getQuantidade();
     }
 
-    public void atualizarEstoque(double quantidade) {
+    public void atualizarEstoque(Integer quantidade) {
         this.quantidade = quantidade;
     }
 

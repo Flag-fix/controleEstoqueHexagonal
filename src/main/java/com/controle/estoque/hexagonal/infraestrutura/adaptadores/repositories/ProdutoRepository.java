@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Component
 @AllArgsConstructor
@@ -20,7 +21,7 @@ public class ProdutoRepository implements ProdutoRepositoryPort {
     @Override
     public List<Produto> buscarTodos() {
         var produtoEntities = this.springProdutoRepository.findAll();
-        return produtoEntities.stream().map(ProdutoEntity::toProduto).toList();
+        return produtoEntities.stream().map(ProdutoEntity::toProduto).collect(Collectors.toList());
     }
 
     @Override

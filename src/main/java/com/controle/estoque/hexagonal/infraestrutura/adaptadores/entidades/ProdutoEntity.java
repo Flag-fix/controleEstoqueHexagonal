@@ -20,7 +20,7 @@ public class ProdutoEntity {
     private UUID id;
     private String nome;
     private Double valorProduto;
-    private Double quantidade;
+    private Integer quantidade;
 
     public ProdutoEntity() {
     }
@@ -38,6 +38,6 @@ public class ProdutoEntity {
     }
 
     public Produto toProduto() {
-        return new Produto(this.id, this.nome, this.quantidade, this.valorProduto);
+        return new Produto(this.id, this.nome, this.valorProduto,this.quantidade);
     }
 }
