@@ -1,18 +1,17 @@
 package com.controle.estoque.hexagonal.aplicacao.adaptatores.controllers;
 
-import com.controle.estoque.hexagonal.aplicacao.adaptatores.controllers.integracao.TestRepositoryIT;
 import com.controle.estoque.hexagonal.dominio.Produto;
 import com.controle.estoque.hexagonal.dominio.dtos.ProdutoDTO;
-import lombok.AllArgsConstructor;
+import com.controle.estoque.hexagonal.integration.TestRepositoryIT;
 import org.junit.Test;
-
+import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@AllArgsConstructor
 public class ProdutoControllerTest extends TestRepositoryIT {
 
+    @Autowired
     private ProdutoController controller;
 
     @Test
