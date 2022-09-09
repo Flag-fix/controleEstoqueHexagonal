@@ -7,6 +7,8 @@ import com.controle.estoque.hexagonal.integration.TestRepositoryIT;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.UUID;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -44,6 +46,35 @@ public class ProdutoControllerTest extends TestRepositoryIT {
         assertNotNull(produto);
         assertEquals(produtoDTO.getNome(), produto.getNome());
     }
+
+//    @Test
+//    public void validaProduto(){
+//        Produto produto = new Produto();
+//        produto.setNome("Calça Jeans");
+//        produto.setQuantidade(1.0);
+//        produto.setValorProduto(100.0);
+//        produto.setId(UUID.randomUUID());
+//
+//        assertEquals(produto.getNome(),"Calça Jeans");
+//        assertEquals(produto.getQuantidade().toString(), "1.0");
+//        assertEquals(produto.getValorProduto().toString(),"100.0");
+//    }
+//
+//    @Test
+//    public void produtoComQuantidadeErrada (){
+//        Produto produto = new Produto();
+//        produto.setNome("Calça Jeans");
+//        produto.setQuantidade(-1.0);
+//        produto.setValorProduto(100.0);
+//        produto.setId(UUID.randomUUID());
+//
+//        ProdutoDTO produtoDTO = produto.toProdutoDTO();
+//
+//
+//
+//
+//
+//    }
 
 
 }
