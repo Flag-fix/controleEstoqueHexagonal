@@ -2,6 +2,7 @@ package com.controle.estoque.hexagonal.aplicacao.adaptatores.controllers;
 
 import com.controle.estoque.hexagonal.dominio.Produto;
 import com.controle.estoque.hexagonal.dominio.dtos.ProdutoDTO;
+import com.controle.estoque.hexagonal.infraestrutura.adaptadores.entidades.ProdutoEntity;
 import com.controle.estoque.hexagonal.integration.TestRepositoryIT;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +21,10 @@ public class ProdutoControllerTest extends TestRepositoryIT {
         ProdutoDTO produtoDTO = new ProdutoDTO();
         produtoDTO.setNome("Calça Jeans");
         produtoDTO.setQuantidade(1);
+        produtoDTO.setPreco(10.0);
 
         controller.criarProduto(produtoDTO);
-        var produto = super.findFirst(Produto.class);
+        var produto = super.findFirst(ProdutoEntity.class);
 
         assertNotNull(produto);
         assertEquals(produtoDTO.getNome(), produto.getNome());

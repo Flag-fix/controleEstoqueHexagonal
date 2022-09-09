@@ -14,30 +14,30 @@ import javax.validation.constraints.NotEmpty;
 @NoArgsConstructor
 public class ProdutoDTO {
 
-    @Schema(
-            example = "Pilha",
-            description = "Identificação do nome do produto",
-            required = true
-    )
-    @JsonProperty("nome")
-    @NotEmpty(message = "Nome não pode ser nulo ou vazio")
+//    @Schema(
+//            example = "Pilha",
+//            description = "Identificação do nome do produto",
+//            required = true
+//    )
+//    @JsonProperty("nome")
+//    @NotEmpty(message = "Nome não pode ser nulo ou vazio")
     private String nome;
 
-    @Schema(
-            example = "50.00",
-            description = "Identificação do preço do produto",
-            required = true
-    )
-    @JsonProperty("preco")
-    @NegativeOrZero(message = "O preço de um produto não pode ser negativo ou zero")
+//    @Schema(
+//            example = "50.00",
+//            description = "Identificação do preço do produto",
+//            required = true
+//    )
+//    @JsonProperty("preco")
+//    @NegativeOrZero(message = "O preço de um produto não pode ser negativo ou zero")
     private Double preco;
 
-    @Schema(
-            example = "10",
-            description = "Identificação do quantidade do produto",
-            required = true
-    )
-    @JsonProperty("quantidade")
-    @NegativeOrZero(message = "A quantidade do produto não pode ser negativo ou zero")
+//    @Schema(
+//            example = "10",
+//            description = "Identificação do quantidade do produto",
+//            required = true
+//    )
+//    @JsonProperty("quantidade")
+//    @NegativeOrZero(message = "A quantidade do produto não pode ser negativo ou zero")
     private Integer quantidade;
 }
